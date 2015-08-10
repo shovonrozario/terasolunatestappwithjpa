@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: TERASOLUNA Server Framework for Java (5.x) Web B
+ lank Project (JPA)
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: rozario.shovon
+Implementation-Vendor-Id: com.sample
+Build-Jdk: 1.8.0_25
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: terasoluna.org
+
