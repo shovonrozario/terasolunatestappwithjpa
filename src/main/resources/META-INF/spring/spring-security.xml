@@ -41,7 +41,7 @@
 		<!-- (4) -->
 		<sec:authentication-provider
 			user-service-ref="sampleUserDetailsService">
-			<!-- (5) -->
+	<!-- (5) -->
 			<sec:password-encoder ref="passwordEncoder" />
 		</sec:authentication-provider>
 	</sec:authentication-manager>

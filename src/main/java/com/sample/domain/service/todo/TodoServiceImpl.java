@@ -6,6 +6,8 @@ import java.util.UUID;
 
 import javax.inject.Inject;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.terasoluna.gfw.common.exception.BusinessException;
@@ -85,5 +87,11 @@ public class TodoServiceImpl implements TodoService {
 	public void delete(String todoId) {
 		Todo todo = findOne(todoId);
 		todoRepository.delete(todo);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Page<Todo> findAll(Pageable pageable) {
+		return todoRepository.findAll(pageable);
 	}
 }
