@@ -6,3 +6,5 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <%@ taglib uri="http://terasoluna.org/functions" prefix="f"%>
 <%@ taglib uri="http://terasoluna.org/tags" prefix="t"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%> <!-- (1) -->
+<%@ taglib uri="http://tiles.apache.org/tags-tiles-extras" prefix="tilesx"%> 

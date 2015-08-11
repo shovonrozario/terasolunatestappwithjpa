@@ -17,7 +17,8 @@
 			<bean
 				class="org.springframework.data.web.PageableHandlerMethodArgumentResolver" />
 
-			<!-- Settings to ensure that UserDetails object of login user is received as Controller argument, by specifying @AuthenticationPrincipal annotation. -->
+			<!-- Settings to ensure that UserDetails object of login user is received 
+				as Controller argument, by specifying @AuthenticationPrincipal annotation. -->
 			<bean
 				class="org.springframework.security.web.bind.support.AuthenticationPrincipalArgumentResolver" />
 		</mvc:argument-resolvers>
@@ -63,8 +64,14 @@
 
 	<!-- Settings View Resolver. -->
 	<mvc:view-resolvers>
-		<mvc:jsp prefix="/WEB-INF/views/" />
+		<mvc:tiles /> <!-- (1) -->
+		<mvc:jsp prefix="/WEB-INF/views/" /> <!-- (2) -->
 	</mvc:view-resolvers>
+
+	<!-- (3) -->
+	<mvc:tiles-configurer>
+		<mvc:definitions location="/WEB-INF/tiles/tiles-definitions.xml" />
+	</mvc:tiles-configurer>
 
 	<bean id="requestDataValueProcessor"
 		class="org.terasoluna.gfw.web.mvc.support.CompositeRequestDataValueProcessor">
